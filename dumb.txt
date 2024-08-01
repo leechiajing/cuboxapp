@@ -1,0 +1,15 @@
+var locationofx = 100;
+  function drawthefarm(){
+    location.forEach((locationa) => {
+      locationa.x += locationofx;
+      ctx.drawImage(farm, locationa.x, locationa.y, 90, 130);
+      if(locationa.x >= canvas.width){
+        locationofx = 0;
+      }
+    });
+    
+    
+  }
+  requestAnimationFrame(drawthefarm);
+  drawthefarm();
+  console.log(location[0].x);
